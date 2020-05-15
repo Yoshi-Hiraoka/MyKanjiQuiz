@@ -1,0 +1,160 @@
+* {
+  user-select: none;
+}
+html {
+  font-size: 62.5%;
+  font-family: serif;
+}
+body {
+  background: #D6BCC1;
+  font-size: 1.4rem;
+  color: #333;
+}
+header {
+  text-align: center;
+}
+nav {
+  text-align: center;
+}
+h1 {
+  font-size: 3.2rem;
+}
+li {
+  font-size: 1.6rem;
+}
+.container {
+  width: 80vw;
+  margin: 4vw auto;
+  background: #fff;
+  padding: 8vw;
+  border-radius: 10px;
+  position: relative;
+}
+
+#question {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+#choices {
+  list-style: none;
+  padding: 0;
+  margin: 8vw 0;
+}
+#choices li {
+  border: 1px solid #ccc;
+  padding: 5vw;
+  margin-bottom: 5vw;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#choices li.correct{
+  background: hsl(110, 40%, 90%);
+  border-color: hsl(110, 40%, 70%);
+  font-weight: bold;
+  color: hsl(110, 40%, 40%);
+}
+#choices li.correct::after {
+  content:' ... せいかいです！';
+}
+#choices li.wrong{
+  background: hsl(0, 95%, 90%);
+  border-color: hsl(8, 95%, 70%);
+  font-weight: bold;
+  color: hsl(8, 95%, 40%);
+}
+#choices li.wrong::after {
+  content:' ... まちがいです!';
+}
+#choices li:hover {
+  background: #f8f8f8;
+}
+#btn, #result a {
+  font-size: 1.6rem;
+  background: #3498db;
+  padding: 4vw;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 6px 0 #2880b9;
+  cursor: pointer;
+}
+#btn.disabled {
+  opacity: 0.7;
+  background: #ccc;
+  box-shadow: 0 6px 0 #bbb;
+}
+#result {
+  width: 55vw;
+  background: #fff;
+  padding: 15vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 25vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  transition: 0.4s;
+}
+#result.hidden {
+  transform: translateY(-500vw);
+}
+#result p {
+  font-size: 2.4rem;
+}
+#result a {
+  display: block;
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+}
+footer a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 5vw;
+}
+footer a:hover {
+  border-bottom: 1px solid #333;
+}
+@media (min-width: 600px) {
+  .container {
+    width: 50vw;
+    padding: 6vw;
+  }
+  #choices li {
+    border: 1px solid #ccc;
+    padding: 1vw;
+    margin-bottom: 2vw;
+  }
+  #btn, #result a {
+    padding: 1vw;
+  }
+  #result {
+    top: 15vw;
+    width: 30vw;
+    padding: 6vw;
+  }
+  #btn {
+    box-shadow: 0 10px 0 #2880b9;
+  }
+  #btn.disabled {
+    box-shadow: 0 10px 0 #bbb;
+  }
+  #result a {
+    box-shadow: 0 10px 0 #2880b9;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    padding: 2vw 2vw 8vw;
+  }
+  #choices {
+    margin: 4vw 0;
+  }
+  #btn {
+    width: 30vw;
+    margin: 0 auto;
+  }
+}
