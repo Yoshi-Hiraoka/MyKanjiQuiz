@@ -113,7 +113,7 @@ footer a {
   display: inline-block;
   color: #333;
   text-decoration: none;
-  margin-bottom: 5vw;
+  margin: 5vw 0;
 }
 footer a:hover {
   border-bottom: 1px solid #333;
